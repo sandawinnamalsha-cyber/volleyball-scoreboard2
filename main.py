@@ -17,16 +17,16 @@ def main(page: ft.Page):
     teamA_name = "Team A"
     teamB_name = "Team B"
 
-    set_text = ft.Text(value="SET 1", size=18, weight=ft.FontWeight.BOLD, color=ft.Colors.WHITE70)
+    set_text = ft.Text(value="SET 1", size=18, weight=ft.FontWeight.BOLD, color=ft.Colors.WHITE_70)
     score_text_A = ft.Text(value="0", size=80, weight=ft.FontWeight.BOLD, color=ft.Colors.BLUE_300, animate_scale=ft.Animation(300, ft.AnimationCurve.BOUNCE_OUT))
     score_text_B = ft.Text(value="0", size=80, weight=ft.FontWeight.BOLD, color=ft.Colors.GREEN_300, animate_scale=ft.Animation(300, ft.AnimationCurve.BOUNCE_OUT))
     
     label_A = ft.Text(value="TEAM A", size=16, color=ft.Colors.BLUE_300, weight=ft.FontWeight.BOLD)
     label_B = ft.Text(value="TEAM B", size=16, color=ft.Colors.GREEN_300, weight=ft.FontWeight.BOLD)
     
-    set1_text = ft.Text(value="Set 1: -", size=13, color=ft.Colors.WHITE54)
-    set2_text = ft.Text(value="Set 2: -", size=13, color=ft.Colors.WHITE54)
-    set3_text = ft.Text(value="Set 3: -", size=13, color=ft.Colors.WHITE54)
+    set1_text = ft.Text(value="Set 1: -", size=13, color=ft.Colors.WHITE_54)
+    set2_text = ft.Text(value="Set 2: -", size=13, color=ft.Colors.WHITE_54)
+    set3_text = ft.Text(value="Set 3: -", size=13, color=ft.Colors.WHITE_54)
     
     sets_won_text = ft.Text(value="Sets - A:0 | B:0", size=16, weight=ft.FontWeight.BOLD, color=ft.Colors.AMBER)
     status_text = ft.Text(value="Game On!", size=20, weight=ft.FontWeight.BOLD, color=ft.Colors.PURPLE_200, text_align=ft.TextAlign.CENTER)
@@ -110,20 +110,20 @@ def main(page: ft.Page):
                 ft.Text("🏐 VOLLEYBALL PRO", size=22, weight=ft.FontWeight.BOLD),
                 ft.Row([input_team_a, input_team_b], alignment=ft.MainAxisAlignment.CENTER),
                 set_text,
-                ft.Divider(height=1, color=ft.Colors.WHITE24),
+                ft.Divider(height=1, color=ft.Colors.WHITE_24),
                 ft.Row([
                     ft.Column([label_A, score_text_A], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
-                    ft.Text(":", size=40, color=ft.Colors.WHITE24),
+                    ft.Text(":", size=40, color=ft.Colors.WHITE_24),
                     ft.Column([label_B, score_text_B], horizontal_alignment=ft.CrossAxisAlignment.CENTER),
                 ], alignment=ft.MainAxisAlignment.SPACE_EVENLY),
                 ft.Row([set1_text, set2_text, set3_text], alignment=ft.MainAxisAlignment.CENTER, spacing=15),
                 sets_won_text,
                 status_text,
-                ft.Divider(height=1, color=ft.Colors.WHITE24),
+                ft.Divider(height=1, color=ft.Colors.WHITE_24),
                 ft.Row([btn_a, btn_b], alignment=ft.MainAxisAlignment.CENTER, spacing=15),
                 ft.Row([btn_next, btn_reset], alignment=ft.MainAxisAlignment.CENTER, spacing=10),
             ], horizontal_alignment=ft.CrossAxisAlignment.CENTER, spacing=12),
-            padding=20, bgcolor=ft.Colors.with_opacity(0.15, ft.Colors.BLACK), border_radius=20, border=ft.border.all(1, ft.Colors.WHITE24)
+            padding=20, bgcolor=ft.Colors.with_opacity(0.15, ft.Colors.BLACK), border_radius=20, border=ft.border.all(1, ft.Colors.WHITE_24)
         )
     )
 
